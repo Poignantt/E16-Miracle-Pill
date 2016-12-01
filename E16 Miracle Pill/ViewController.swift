@@ -17,10 +17,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var successImage: UIImageView!
     @IBOutlet weak var statePickerBTN: UIButton!
+    @IBOutlet weak var stateLabel: UILabel!
     
+    var currentRow: Int?
     var states = ["Australian Capital Terrirory","New South Wales","Northern Territory","Queensland","South Australia","Tasmania","Victoria","Western Australia"]
-    var statesAcr = ["ACT","NSW","NT","QLD","SA","TAS","VIC","WA"]
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +43,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        statePickerBTN.setTitle("Your state is \(statesAcr[row])", for: UIControlState.normal)
-        statePicker.isHidden = true
+        currentRow = row
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,9 +53,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func stateButtonPress(_ sender: Any) {
         
-
+        if statePicker.isHidden == true {
         statePicker.isHidden = false
-
+        statePickerBTN.setTitle("Select State", for: UIControlState.normal)
+        } else {
+        statePicker.isHidden = true
+        stateLabel.text = states[currentRow!]
+        statePickerBTN.setTitle("Change State", for: UIControlState.normal)
+        }
     }
     
 

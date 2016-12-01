@@ -74,15 +74,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STREET ADDRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b57-qw-3b3">
-                                <rect key="frame" x="36" y="284" width="303" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="zbS-Jl-kFx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQJ-f1-O2R">
                                 <rect key="frame" x="36" y="306" width="303" height="30"/>
                                 <constraints>
@@ -119,17 +110,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="2V6-Ct-EKh">
-                                <rect key="frame" x="105" y="269.5" width="165" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="fRE-Na-7ew"/>
-                                    <constraint firstAttribute="width" constant="165" id="jqG-Wu-P93"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mml-xE-aok">
-                                <rect key="frame" x="36" y="426" width="303" height="20"/>
+                                <rect key="frame" x="36" y="426" width="97" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="HZA-Ba-wHm"/>
+                                    <constraint firstAttribute="width" constant="97" id="YLR-op-EX7"/>
                                 </constraints>
                                 <state key="normal" title="Choose State"/>
                                 <connections>
@@ -153,6 +138,31 @@
                                     <action selector="buyButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jbX-YS-WzY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7iq-Zk-02S">
+                                <rect key="frame" x="143" y="426" width="196" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="MBW-vg-U4N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STREET ADDRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b57-qw-3b3">
+                                <rect key="frame" x="36" y="284" width="303" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zbS-Jl-kFx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="2V6-Ct-EKh">
+                                <rect key="frame" x="105" y="269" width="165" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="fRE-Na-7ew"/>
+                                    <constraint firstAttribute="width" constant="165" id="jqG-Wu-P93"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -172,15 +182,18 @@
                             <constraint firstItem="b57-qw-3b3" firstAttribute="top" secondItem="wtR-gE-I7V" secondAttribute="bottom" constant="8" id="SuJ-n0-Bl3"/>
                             <constraint firstItem="wtR-gE-I7V" firstAttribute="top" secondItem="owe-Ht-bGz" secondAttribute="bottom" constant="1" id="Twl-DV-Ytw"/>
                             <constraint firstItem="puY-e4-dre" firstAttribute="top" secondItem="YfH-D0-nux" secondAttribute="bottom" constant="8" id="UvV-QE-tqz"/>
+                            <constraint firstItem="7iq-Zk-02S" firstAttribute="trailing" secondItem="2LK-0T-a6c" secondAttribute="trailing" id="W5M-fj-MSd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G6W-C7-b4u" secondAttribute="trailing" constant="20" id="YTv-cS-Gbl"/>
                             <constraint firstItem="F7b-Bh-ylw" firstAttribute="top" secondItem="QGk-n2-sUU" secondAttribute="bottom" constant="1" id="Yct-3z-MNA"/>
                             <constraint firstItem="G6W-C7-b4u" firstAttribute="top" secondItem="puY-e4-dre" secondAttribute="bottom" constant="8" id="bNF-BC-vNP"/>
                             <constraint firstItem="GQJ-f1-O2R" firstAttribute="top" secondItem="b57-qw-3b3" secondAttribute="bottom" constant="1" id="bYr-49-ZKc"/>
+                            <constraint firstItem="7iq-Zk-02S" firstAttribute="top" secondItem="2LK-0T-a6c" secondAttribute="bottom" constant="1" id="cD2-3n-Zdl"/>
                             <constraint firstItem="owe-Ht-bGz" firstAttribute="leading" secondItem="G6W-C7-b4u" secondAttribute="leading" id="cOQ-T6-O70"/>
                             <constraint firstItem="b57-qw-3b3" firstAttribute="leading" secondItem="wtR-gE-I7V" secondAttribute="leading" id="f8B-72-kVf"/>
                             <constraint firstItem="G6W-C7-b4u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="fxp-1Y-7dQ"/>
                             <constraint firstItem="2V6-Ct-EKh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hro-Mt-Oq7"/>
                             <constraint firstItem="GQJ-f1-O2R" firstAttribute="leading" secondItem="b57-qw-3b3" secondAttribute="leading" id="hzx-rq-MYh"/>
+                            <constraint firstItem="7iq-Zk-02S" firstAttribute="leading" secondItem="mml-xE-aok" secondAttribute="trailing" constant="10" id="i1E-8T-03k"/>
                             <constraint firstItem="G0J-Ef-AHj" firstAttribute="top" secondItem="Qtm-eg-wVv" secondAttribute="bottom" constant="35" id="iV7-c3-AoC"/>
                             <constraint firstItem="2LK-0T-a6c" firstAttribute="top" secondItem="F7b-Bh-ylw" secondAttribute="bottom" constant="8" id="ic2-9g-TFX"/>
                             <constraint firstItem="YfH-D0-nux" firstAttribute="centerX" secondItem="O85-5p-6Bz" secondAttribute="centerX" id="k1M-43-xWd"/>
@@ -195,12 +208,12 @@
                             <constraint firstItem="Qtm-eg-wVv" firstAttribute="trailing" secondItem="2LK-0T-a6c" secondAttribute="trailing" id="xeg-r8-iMU"/>
                             <constraint firstItem="mml-xE-aok" firstAttribute="top" secondItem="2LK-0T-a6c" secondAttribute="bottom" constant="1" id="yah-bG-CRi"/>
                             <constraint firstItem="wtR-gE-I7V" firstAttribute="trailing" secondItem="owe-Ht-bGz" secondAttribute="trailing" id="yf4-9I-e0h"/>
-                            <constraint firstItem="mml-xE-aok" firstAttribute="trailing" secondItem="2LK-0T-a6c" secondAttribute="trailing" id="zfS-OE-c0D"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityTF" destination="F7b-Bh-ylw" id="Qrg-NT-c6T"/>
                         <outlet property="fullNameTF" destination="wtR-gE-I7V" id="ojG-Os-9bA"/>
+                        <outlet property="stateLabel" destination="7iq-Zk-02S" id="JoI-5C-rCR"/>
                         <outlet property="statePicker" destination="Qtm-eg-wVv" id="sPh-rd-GZZ"/>
                         <outlet property="statePickerBTN" destination="mml-xE-aok" id="RC3-bt-siP"/>
                         <outlet property="streetAddressTF" destination="GQJ-f1-O2R" id="u1V-rW-Zca"/>
