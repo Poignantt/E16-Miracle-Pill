@@ -135,7 +135,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="buyNowBtn"/>
                                 <connections>
-                                    <action selector="buyButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jbX-YS-WzY"/>
+                                    <action selector="buyButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOw-qc-ce0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7iq-Zk-02S">
@@ -157,9 +157,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="2V6-Ct-EKh">
-                                <rect key="frame" x="105" y="269" width="165" height="128"/>
+                                <rect key="frame" x="105" y="250.5" width="165" height="165"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="fRE-Na-7ew"/>
+                                    <constraint firstAttribute="height" constant="165" id="fRE-Na-7ew"/>
                                     <constraint firstAttribute="width" constant="165" id="jqG-Wu-P93"/>
                                 </constraints>
                             </imageView>
@@ -259,25 +259,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buyNowBTN" destination="G0J-Ef-AHj" id="Bn3-Um-NqD"/>
-                        <outlet property="cityL" destination="QGk-n2-sUU" id="aqQ-xi-j6j"/>
                         <outlet property="cityTF" destination="F7b-Bh-ylw" id="Qrg-NT-c6T"/>
-                        <outlet property="costLabel" destination="puY-e4-dre" id="wLe-FR-Kac"/>
-                        <outlet property="countryL" destination="cOD-XM-Z8s" id="XSo-pR-d0c"/>
+                        <outlet property="countryL" destination="cOD-XM-Z8s" id="2zf-9v-g6l"/>
                         <outlet property="countryTF" destination="bCd-9A-7rf" id="q6w-qY-TFH"/>
-                        <outlet property="divider" destination="G6W-C7-b4u" id="Ch3-x0-lKG"/>
-                        <outlet property="fullNameL" destination="owe-Ht-bGz" id="Bvd-lJ-ify"/>
                         <outlet property="fullNameTF" destination="wtR-gE-I7V" id="ojG-Os-9bA"/>
-                        <outlet property="miracleLabel" destination="YfH-D0-nux" id="Ls4-8g-1JW"/>
-                        <outlet property="pillImage" destination="O85-5p-6Bz" id="Hbb-d6-r9c"/>
-                        <outlet property="stateL" destination="2LK-0T-a6c" id="6zm-Y2-doI"/>
                         <outlet property="stateLabel" destination="7iq-Zk-02S" id="JoI-5C-rCR"/>
                         <outlet property="statePicker" destination="Qtm-eg-wVv" id="sPh-rd-GZZ"/>
                         <outlet property="statePickerBTN" destination="mml-xE-aok" id="RC3-bt-siP"/>
-                        <outlet property="streetAddressL" destination="b57-qw-3b3" id="qIl-NT-UWi"/>
                         <outlet property="streetAddressTF" destination="GQJ-f1-O2R" id="u1V-rW-Zca"/>
                         <outlet property="successImage" destination="2V6-Ct-EKh" id="4M1-AJ-vDv"/>
-                        <outlet property="zipCodeL" destination="eV5-uh-oIv" id="dze-ti-7LL"/>
+                        <outlet property="zipcodeL" destination="eV5-uh-oIv" id="gzU-tk-N3C"/>
                         <outlet property="zipeCodeTF" destination="yUQ-Yh-MuB" id="r6V-WS-PAc"/>
                     </connections>
                 </viewController>
