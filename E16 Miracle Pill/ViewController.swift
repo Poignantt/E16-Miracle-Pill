@@ -12,12 +12,34 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     // weak references mean that the link to the reference will not be held once the view is no longer visible.
     @IBOutlet weak var fullNameTF: UITextField!
+    @IBOutlet weak var fullNameL: UILabel!
+    
     @IBOutlet weak var streetAddressTF: UITextField!
+    @IBOutlet weak var streetAddressL: UILabel!
+    
     @IBOutlet weak var cityTF: UITextField!
+    @IBOutlet weak var cityL: UILabel!
+    
+    @IBOutlet weak var stateL: UILabel!
     @IBOutlet weak var statePicker: UIPickerView!
+    
     @IBOutlet weak var successImage: UIImageView!
+    
     @IBOutlet weak var statePickerBTN: UIButton!
     @IBOutlet weak var stateLabel: UILabel!
+    
+    @IBOutlet weak var countryL: UILabel!
+    @IBOutlet weak var countryTF: UITextField!
+    
+    @IBOutlet weak var zipCodeL: UILabel!
+    @IBOutlet weak var zipeCodeTF: UITextField!
+    
+    @IBOutlet weak var buyNowBTN: UIButton!
+    @IBOutlet weak var pillImage: UIImageView!
+    @IBOutlet weak var miracleLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var divider: UIView!
+    
     
     var currentRow: Int?
     var states = ["Australian Capital Terrirory","New South Wales","Northern Territory","Queensland","South Australia","Tasmania","Victoria","Western Australia"]
@@ -56,17 +78,57 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if statePicker.isHidden == true {
         statePicker.isHidden = false
         statePickerBTN.setTitle("Select State", for: UIControlState.normal)
+            countryL.isHidden = true
+            countryTF.isHidden = true
+            
+            zipCodeL.isHidden = true
+            zipeCodeTF.isHidden = true
         } else {
         statePicker.isHidden = true
         stateLabel.text = states[currentRow!]
         statePickerBTN.setTitle("Change State", for: UIControlState.normal)
+            countryL.isHidden = false
+            countryTF.isHidden = false
+            
+            zipCodeL.isHidden = false
+            zipeCodeTF.isHidden = false
         }
     }
     
 
     @IBAction func buyButtonPress(_ sender: Any) {
+        if fullNameTF.text != "" && streetAddressTF.text != "" && cityTF.text != "" && stateLabel.text != "" && countryTF.text != "" && zipeCodeTF.text != "" {
+            fullNameTF.isHidden = true
+            fullNameL.isHidden = true
+            streetAddressTF.isHidden = true
+            streetAddressL.isHidden = true
+            
+            cityTF.isHidden = true
+            cityL.isHidden = true
+            
+            stateL.isHidden = true
+            statePicker.isHidden = true
+            
+            successImage.isHidden = false
+            
+            statePickerBTN.isHidden = true
+            stateLabel.isHidden = true
+            
+            countryL.isHidden = true
+            countryTF.isHidden = true
+            
+            zipCodeL.isHidden = true
+            zipeCodeTF.isHidden = true
+            divider.isHidden = true
+            
+            buyNowBTN.isHidden = true
+            pillImage.isHidden = true
+            miracleLabel.isHidden = true
+            costLabel.isHidden = true
+            print("Miracle Drug for \(fullNameTF.text)/n @ \(streetAddressTF.text), \(zipeCodeTF.text) \(cityTF.text)/n \(stateLabel.text) \(countryTF.text)")
+        }
     }
-
+    
     
     
 }
